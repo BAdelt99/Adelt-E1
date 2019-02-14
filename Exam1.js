@@ -20,10 +20,10 @@ try
     if (query['cmd'] == undefined)
       throw Error("A command must be specified");
       
-      if(query['mpg'] == undefined || parseInt(query['mpg']) < 0)
+      if(query['mpg'] == undefined || query['mpg'] != parseInt(query['mpg'])|| parseInt(query['mpg']) < 0)
           throw Error("Invalid miles per gallon");
           
-      if(query['fuelCost'] == undefined || parseInt(query['fuelCost']) < 0)
+      if(query['fuelCost'] == undefined || query['fuelCost'] != parseInt(query['fuelCost'])|| parseInt(query['fuelCost']) < 0)
           throw Error("Invalid fuel cost");
           
         
@@ -55,7 +55,7 @@ try
   function calcDistance(query)
   
   {
-        if(query['budget'] == undefined || parseInt(query['budget']) < 0)
+        if(query['budget'] == undefined || query['budget'] != parseInt(query['budget'])|| parseInt(query['budget']) < 0)
           throw Error("Invalid budget");
           
       var fuelCost = parseInt(query['fuelCost']);
@@ -67,7 +67,7 @@ try
   
   function calcCost(query)
   {
-        if(query['distance'] == undefined || parseInt(query['distance']) < 0)
+        if(query['distance'] == undefined || query['distance'] != parseInt(query['distance'])|| parseInt(query['distance']) < 0)
           throw Error("Invalid distance");
           
       var fuelCost = parseInt(query['fuelCost']);
